@@ -1,0 +1,135 @@
+Source: openscap
+Priority: extra
+Maintainer: Pierre Chifflier <pollux@debian.org>
+Build-Depends: debhelper (>= 9),
+    autotools-dev,
+    libpcre3-dev,
+    libxml2-dev,
+    libxslt1-dev,
+    swig,
+    python-all-dev, python-support (>= 0.5.3),
+    libperl-dev,
+    libcurl4-openssl-dev | libcurl4-gnutls-dev | libcurl-dev,
+    libgcrypt11-dev,
+    libapt-pkg-dev,
+    libselinux1-dev [linux-any],
+    libcap-dev [linux-any],
+    libattr1-dev,
+    libldap2-dev,
+    pkg-config,
+    dh-autoreconf
+XS-Python-Version: all
+Standards-Version: 3.9.5
+Section: libs
+Homepage: http://www.open-scap.org/
+
+Package: libopenscap-dev
+Section: libdevel
+Architecture: linux-any
+Depends: libopenscap8 (= ${binary:Version}), ${misc:Depends}, libjs-jquery
+Description: Set of libraries enabling integration of the SCAP line of standards
+ OpenSCAP is a set of open source libraries providing an easier path
+ for integration of the SCAP line of standards. SCAP is a line of
+ standards managed by NIST with the goal of providing a standard language
+ for the expression of Computer Network Defense related information.
+ .
+ The intended scope of this project is to implement working interface
+ wrappers for parsing and querying SCAP content including:
+  * Common Vulnerabilities and Exposures (CVE)
+  * Common Configuration Enumeration (CCE)
+  * Common Platform Enumeration (CPE)
+  * Common Vulnerability Scoring System (CVSS)
+  * Extensible Configuration Checklist Description Format (XCCDF)
+  * Open Vulnerability and Assessment Language (OVAL)
+ .
+ This package contains the development files for OpenSCAP.
+
+Package: libopenscap8
+Section: libs
+Architecture: linux-any
+Conflicts: libopenscap0, libopenscap1, libopenscap3
+Replaces: libopenscap0, libopenscap1, libopenscap3
+Pre-Depends: multiarch-support
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Set of libraries enabling integration of the SCAP line of standards
+ OpenSCAP is a set of open source libraries providing an easier path
+ for integration of the SCAP line of standards. SCAP is a line of
+ standards managed by NIST with the goal of providing a standard language
+ for the expression of Computer Network Defense related information.
+ .
+ The intended scope of this project is to implement working interface
+ wrappers for parsing and querying SCAP content including:
+  * Common Vulnerabilities and Exposures (CVE)
+  * Common Configuration Enumeration (CCE)
+  * Common Platform Enumeration (CPE)
+  * Common Vulnerability Scoring System (CVSS)
+  * Extensible Configuration Checklist Description Format (XCCDF)
+  * Open Vulnerability and Assessment Language (OVAL)
+
+Package: python-openscap
+Section: python
+Architecture: linux-any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, libopenscap8 (= ${binary:Version})
+XB-Python-Version: ${python:Versions}
+Provides: ${python:Provides}
+Description: Set of libraries enabling integration of the SCAP line of standards
+ OpenSCAP is a set of open source libraries providing an easier path
+ for integration of the SCAP line of standards. SCAP is a line of
+ standards managed by NIST with the goal of providing a standard language
+ for the expression of Computer Network Defense related information.
+ .
+ The intended scope of this project is to implement working interface
+ wrappers for parsing and querying SCAP content including:
+  * Common Vulnerabilities and Exposures (CVE)
+  * Common Configuration Enumeration (CCE)
+  * Common Platform Enumeration (CPE)
+  * Common Vulnerability Scoring System (CVSS)
+  * Extensible Configuration Checklist Description Format (XCCDF)
+  * Open Vulnerability and Assessment Language (OVAL)
+ .
+ This package contains the Python bindings for OpenSCAP.
+
+Package: libopenscap-perl
+Section: perl
+Architecture: linux-any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${perl:Depends}, libopenscap8 (= ${binary:Version})
+Description: Set of libraries enabling integration of the SCAP line of standards
+ OpenSCAP is a set of open source libraries providing an easier path
+ for integration of the SCAP line of standards. SCAP is a line of
+ standards managed by NIST with the goal of providing a standard language
+ for the expression of Computer Network Defense related information.
+ .
+ The intended scope of this project is to implement working interface
+ wrappers for parsing and querying SCAP content including:
+  * Common Vulnerabilities and Exposures (CVE)
+  * Common Configuration Enumeration (CCE)
+  * Common Platform Enumeration (CPE)
+  * Common Vulnerability Scoring System (CVSS)
+  * Extensible Configuration Checklist Description Format (XCCDF)
+  * Open Vulnerability and Assessment Language (OVAL)
+ .
+ This package contains the Perl bindings for OpenSCAP.
+
+Package: libopenscap8-dbg
+Section: debug
+Architecture: linux-any
+Conflicts: libopenscap0-dbg
+Replaces: libopenscap0-dbg
+Depends: ${shlibs:Depends}, libopenscap8 (= ${binary:Version}), ${misc:Depends}
+Description: Set of libraries enabling integration of the SCAP line of standards
+ OpenSCAP is a set of open source libraries providing an easier path
+ for integration of the SCAP line of standards. SCAP is a line of
+ standards managed by NIST with the goal of providing a standard language
+ for the expression of Computer Network Defense related information.
+ .
+ The intended scope of this project is to implement working interface
+ wrappers for parsing and querying SCAP content including:
+  * Common Vulnerabilities and Exposures (CVE)
+  * Common Configuration Enumeration (CCE)
+  * Common Platform Enumeration (CPE)
+  * Common Vulnerability Scoring System (CVSS)
+  * Extensible Configuration Checklist Description Format (XCCDF)
+  * Open Vulnerability and Assessment Language (OVAL)
+ .
+ This package contains debugging symbols for OpenSCAP.
+

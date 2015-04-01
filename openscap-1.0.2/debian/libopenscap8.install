@@ -1,0 +1,5 @@
+usr/bin/oscap
+usr/lib/*/lib*.so.*
+usr/lib/*/openscap/probe_*
+usr/share/man/man8/oscap.8
+usr/share/openscap/*

@@ -1,0 +1,5 @@
+001_fix_kfreebsd_probe.patch
+005_configure_dpkg_probe.patch
+006_fix_dpkg_probe.patch
+007_automake_fix_schema_install.patch
+008_fix_kfreebsd_ftbfs.patch

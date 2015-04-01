@@ -1,0 +1,25 @@
+Index: openscap/configure.ac
+===================================================================
+--- openscap.orig/configure.ac	2014-01-13 13:32:22.853879081 +0100
++++ openscap/configure.ac	2014-01-13 13:32:22.849879081 +0100
+@@ -595,7 +595,7 @@
+ echo '* Checking for apt_pkg library used by: dpkginfo '
+ PKG_CHECK_MODULES([apt_pkg], [libapt-pkg >= 0.0],[],[
+ SAVE_LIBS=$LIBS
+-AC_SEARCH_LIBS([pkgInitConfig],[apt-pkg],[
++AC_SEARCH_LIBS([pkgVersion],[apt-pkg],[
+ apt_pkg_CFLAGS=;
+ apt_pkg_LIBS=-lapt-pkg;
+ ],[
+@@ -609,7 +609,10 @@
+ SAVE_LIBS=$LIBS
+ LIBS=$apt_pkg_LIBS
+ AC_LANG_PUSH([C++])
+-AC_CHECK_FUNCS([pkgInitConfig pkgInitSystem], [], [
++AC_LINK_IFELSE(
++  [AC_LANG_PROGRAM([#include <apt-pkg/init.h>],
++    [if (pkgInitConfig (*_config) == false) return -1;])],
++  [TEST_LIBS="$TEST_LIBS -lapt-pkg"], [
+ probe_dpkginfo_req_deps_ok=no;
+ probe_dpkginfo_req_deps_missing+=", $ac_func func";
+ ])
