@@ -26,7 +26,7 @@ f0bc7befd82103d666a85562d577ddea  ./schemas/sds/1.2/xlink.xsd
 8b9418377be60667fc0551250476893a  ./schemas/cpe/2.3/cpe-language_2.3.xsd
 e66fb1a23296db4c5da455b59adf06de  ./schemas/cpe/2.2/cpe-dictionary_2.2.xsd
 4650b740644c5a8bb64d4c9a59f9d3c4  ./schemas/cpe/2.0/cpe-dictionary_2.0.xsd
-691895e88b94f45db3960f274143f823  ./schemas/Makefile.in
+414b5ca0ddca146a453f8c912eaf2353  ./schemas/Makefile.in
 0dbc7c4024f33c5cc48033c1f1be0dbb  ./schemas/ocil/2.0/ocil-2.0.xsd
 2b50a34dfc0ac52b30fd1f6a6f0f868d  ./schemas/oval/5.3/ios-system-characteristics-schema.xsd
 ad2feb906e8b0dc476ac67b1fa8c1fee  ./schemas/oval/5.3/oval-common-schema.xsd
@@ -427,7 +427,7 @@ e8150fbe6734490223c2d00d1ad2cc7b  ./schemas/oval/5.4/independent-definitions-sch
 94f9b854a2535ba25e95ea69c3bb139d  ./schemas/oval/5.4/freebsd-system-characteristics-schema.xsd
 96d5eed00fbaa57dd87c4d1ff2d3aac3  ./schemas/oval/5.4/esx-definitions-schema.xsd
 966cf102cd52ca82bd63f3ed61f509d7  ./schemas/oval/5.4/catos-system-characteristics-schema.xsd
-be5f8a5b5c39e38648c68c2fc809d298  ./schemas/Makefile.am
+01a05b87432056d0fe545139f6430c91  ./schemas/Makefile.am
 f1e3cc18966f2be9f0af3b7315f165db  ./schemas/xccdf/1.1/cpe-language_2.0.xsd
 552fba6d317557987e70937814e1edd8  ./schemas/xccdf/1.1/simpledc20021212.xsd
 1ed40af16594a27bcbb11c0cd1951830  ./schemas/xccdf/1.1/XMLSchema.dtd
@@ -1464,6 +1464,11 @@ d28cc43884394d79172e89e8feaa39cb  ./INSTALL
 832c062536d9450bac4a5630cb2be8cb  ./configure
 cc837e7319fc472ad7072e16cfceb114  ./Makefile.in
 89b6f65fc6d1b41f75989eca36e36c84  ./acinclude.m4
+266f9759f56277b2751b24d1eb17c50f  ./.pc/.quilt_patches
+be5f8a5b5c39e38648c68c2fc809d298  ./.pc/automake-schemas-wildcard/schemas/Makefile.am
+784810f1115ebe1c34a43fcae5b8ce5f  ./.pc/applied-patches
+e8a673d5d4d69a5fd11c880fd4c3c481  ./.pc/.quilt_series
+26ab0db90d72e28ad0ba1e22ee510510  ./.pc/.version
 294185b1d4fd553b552a1529a1cfb7ad  ./tests/valgrind_test.sh
 883d034859803447ef6b2307a462230e  ./tests/suppressions.supp
 f6f2e12d5c30f2de32b37ad4ea1db234  ./tests/schemas/Makefile.in
@@ -2198,7 +2203,7 @@ f0fdbdbc148b77a6026c7e3113a59817  ./config/snippet/arg-nonnull.h
 77cc28d5d202509b03ffa09cd1eb39dd  ./autom4te.cache/output.1
 3b3807ef2f1c7c08eb6f5ff371bc81ad  ./autom4te.cache/traces.1
 77cc28d5d202509b03ffa09cd1eb39dd  ./autom4te.cache/output.2
-28677212494d80cbea6260458dafdea6  ./autom4te.cache/requests
+c69fc83d4d7d31b88c42f0e7ed5e9d09  ./autom4te.cache/requests
 77cc28d5d202509b03ffa09cd1eb39dd  ./autom4te.cache/output.0
 2425d3cfea1850c66988c823856e9498  ./autom4te.cache/traces.0
 eb2fcfb7e32812249a391528379dd550  ./src/common/util.h
