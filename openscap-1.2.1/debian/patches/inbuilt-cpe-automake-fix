@@ -1,0 +1,31 @@
+Description: Fixed installation of inbuilt CPE in cpe/Makefile.am
+ Need to use $(srcdir) in wildcard statements on Debian.
+ .
+ openscap (1.2.1-1) unstable; urgency=low
+ .
+   * Imported Upstream version 1.2.1
+   * Enabled SCE
+   * Removed patches that have been merged upstream
+Author: Martin Preisler <martin@preisler.me>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- openscap-1.2.1.orig/cpe/Makefile.am
++++ openscap-1.2.1/cpe/Makefile.am
+@@ -1,4 +1,4 @@
+ cpedir = $(pkgdatadir)/cpe/
+-cpe_DATA = $(wildcard *.xml) README
++cpe_DATA = $(wildcard $(srcdir)/*.xml) README
+ 
+ EXTRA_DIST = $(cpe_DATA)
