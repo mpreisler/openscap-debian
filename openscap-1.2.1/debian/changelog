@@ -3,6 +3,8 @@ openscap (1.2.1-1) unstable; urgency=low
   * Imported Upstream version 1.2.1
   * Enabled SCE
   * Removed patches that have been merged upstream
+  * Fixed schemas installation
+  * Fixed inbuilt CPE installation
 
  -- Martin Preisler <martin@preisler.me>  Wed, 01 Apr 2015 23:41:53 +0100
 
